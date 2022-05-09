@@ -1,0 +1,65 @@
+<html>
+</head>
+
+<body>
+
+
+    <form action="save.php" method="post">
+
+        <label for="">Auteur</label>
+        <input type="text" name="auteur">
+        <label for="">Balise titre</label>
+        <input type="text" name="titre">
+        <label for="">Meta description</label>
+        <input type="text" name="description">
+        <label for="">Contenu</label>
+        <textarea name="contenu" id="contenu"></textarea>
+
+
+        <input type="radio" name="publier" value="1">
+        <label for="">Publier</label>
+        <button>Enregistrer</button>
+
+
+    </form>
+
+    <script src="ckeditor.js"></script>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#contenu'), {
+                // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+            })
+            .then(editor => {
+                window.editor = editor;
+            })
+            .catch(err => {
+                console.error(err.stack);
+            });
+    </script>
+    <script src="../build/ckeditor.js"></script>
+    <script>ClassicEditor
+            .create(document.querySelector('#contenu'), {
+
+                licenseKey: '',
+
+
+
+            })
+            .then(editor => {
+                window.editor = editor;
+
+
+
+
+            })
+            .catch(error => {
+                console.error('Oops, something went wrong!');
+                console.error('Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:');
+                console.warn('Build id: u1f9zdi3etm3-5ueu4trwjnb9');
+                console.error(error);
+            });
+    </script>
+</body>
+
+</html>

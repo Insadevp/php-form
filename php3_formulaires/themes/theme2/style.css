@@ -1,0 +1,11 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(70, 32, 241);
+
+}
+nav a {
+    text-decoration: none;
+    color: rgb(134, 129, 129);
+    font-size: 2em;
+}
